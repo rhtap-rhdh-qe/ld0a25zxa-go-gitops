@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: ld0a25zxa-go-gitops
+  description: This is GitOps manifest for ld0a25zxa-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: ld0a25zxa-go
+    janus-idp.io/tekton: ld0a25zxa-go
+    backstage.io/kubernetes-id: ld0a25zxa-go 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:ld0a25zxa-go
